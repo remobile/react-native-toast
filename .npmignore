@@ -1,10 +1,11 @@
-*.[aod]
 *.DS_Store
 .DS_Store
 *Thumbs.db
 .gradle
 .idea
 npm-debug.log
+node_modules
 /android/build
 /ios/**/*xcuserdata*
 /ios/**/*xcshareddata*
+

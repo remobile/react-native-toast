@@ -1,7 +1,7 @@
 {
     "name": "react-native-toast",
-        "version": "1.0.0",
-        "description": "A toast for react-native",
+        "version": "1.0.1",
+        "description": "A android like toast for react-native support for ios and android",
         "main": "index.js",
         "author": {
             "name": "YunJiang.Fang",
@@ -14,6 +14,7 @@
             "ios",
             "android",
             "toast",
+            "position",
             "remobile",
             "mobile"
         ],
