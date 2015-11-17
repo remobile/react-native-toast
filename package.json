@@ -1,0 +1,28 @@
+{
+    "name": "react-native-toast",
+        "version": "1.0.0",
+        "description": "A toast for react-native",
+        "main": "index.js",
+        "author": {
+            "name": "YunJiang.Fang",
+            "email": "42550564@qq.com"
+        },
+        "license": "MIT",
+        "keywords": [
+            "react-native",
+            "react-component",
+            "ios",
+            "android",
+            "toast",
+            "remobile",
+            "mobile"
+        ],
+        "homepage": "https://github.com/remobile/react-native-toast",
+        "bugs": {
+            "url": "https://github.com/remobile/react-native-toast/issues"
+        },
+        "repository": {
+            "type": "git",
+            "url": "git://github.com/remobile/react-native-toast.git"
+        }
+}
