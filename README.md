@@ -9,7 +9,7 @@ npm install react-native-toast --save
 ### Installation (iOS)
 * Drag RCTToast.xcodeproj to your project on Xcode.
 * Click on your main project file (the one that represents the .xcodeproj) select Build Phases and drag libRCTToast.a from the Products folder inside the RCTToast.xcodeproj.
-* Look for Header Search Paths and make sure it contains both $(SRCROOT)/../react-native/React as recursive.
+* Look for Header Search Paths and make sure it contains both $(SRCROOT)/../../../react-native/React as recursive.
 
 ### Installation (Android)
 ```gradle
@@ -74,7 +74,7 @@ var {
 } = React;
 
 var Toast = require('react-native-toast');
-var Button = require('react-native-simple-button');
+var Button = require('@remobile/react-native-simple-button');
 
 module.exports = React.createClass({
     render() {
