@@ -3,7 +3,7 @@ A android like toast for react-native support for ios and android
 
 ## Installation
 ```sh
-npm install react-native-toast --save
+npm install @remobile/react-native-toast --save
 ```
 
 ### Installation (iOS)
