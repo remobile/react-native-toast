@@ -5,7 +5,7 @@ var {
     NativeModules
 } = React;
 
-var CRTToast= NativeModules.Toast;
+var RCTToast= NativeModules.Toast;
 var Toast = {};
 
 var optionsBuilder = function () {
@@ -50,7 +50,7 @@ var optionsBuilder = function () {
 
 
 var showWithOptions = function (options) {
-    CRTToast.show(options);
+    RCTToast.show(options);
 };
 
 var showToast = function (message, duration, position) {
@@ -92,7 +92,7 @@ Toast.show = function (message) {
 };
 
 Toast.hide = function () {
-  CRTToast.hide();
+  RCTToast.hide();
 };
 
 module.exports = Toast;
