@@ -69,7 +69,6 @@ public class Toast extends ReactContextBaseJavaModule implements LifecycleEventL
         getReactApplicationContext().addLifecycleEventListener(this);
     }
 
-
     @Override
     public void onHostPause() {
         if (mostRecentToast != null) {

@@ -1,9 +1,10 @@
 'use strict';
 
-var React = require('react-native');
+
+var ReactNative = require('react-native');
 var {
     NativeModules
-} = React;
+} = ReactNative;
 
 var RCTToast= NativeModules.Toast;
 var Toast = {};
@@ -56,7 +57,7 @@ var showWithOptions = function (options) {
 var showToast = function (message, duration, position) {
   showWithOptions(
       optionsBuilder()
-          .withMessage(message)
+          .withMessage(message||'未知数据')
           .withDuration(duration)
           .withPosition(position)
           .build()

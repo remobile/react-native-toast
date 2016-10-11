@@ -15,7 +15,7 @@ npm install @remobile/react-native-toast --save
 ```gradle
 ...
 include ':react-native-toast'
-project(':react-native-toast').projectDir = new File(rootProject.projectDir, '../node_modules/@remobile/react-native-toast/android')
+project(':react-native-toast').projectDir = new File(settingsDir, '../node_modules/@remobile/react-native-toast/android')
 ```
 
 * In `android/app/build.gradle`
@@ -28,35 +28,22 @@ dependencies {
 }
 ```
 
-* register module (in MainActivity.java)
+* register module (in MainApplication.java)
 
 ```java
-import com.remobile.toast.*;  // <--- import
+......
+import com.remobile.toast.RCTToastPackage;  // <--- import
 
-public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
-  ......
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    mReactRootView = new ReactRootView(this);
+......
 
-    mReactInstanceManager = ReactInstanceManager.builder()
-      .setApplication(getApplication())
-      .setBundleAssetName("index.android.bundle")
-      .setJSMainModuleName("index.android")
-      .addPackage(new MainReactPackage())
-      .addPackage(new RCTToastPackage())              // <------ add here
-      .setUseDeveloperSupport(BuildConfig.DEBUG)
-      .setInitialLifecycleState(LifecycleState.RESUMED)
-      .build();
-
-    mReactRootView.startReactApplication(mReactInstanceManager, "ExampleRN", null);
-
-    setContentView(mReactRootView);
-  }
-
-  ......
+@Override
+protected List<ReactPackage> getPackages() {
+   ......
+   new RCTToastPackage(),            // <------ add here
+   ......
 }
+
+```
 ```
 
 ### Screencasts
@@ -66,12 +53,13 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
 
 ### Example
 ```js
-var React = require('react-native');
+var React = require('react');
+var ReactNative = require('react-native');
 var {
     StyleSheet,
     View,
     Image
-} = React;
+} = ReactNative;
 
 var Toast = require('react-native-toast');
 var Button = require('@remobile/react-native-simple-button');
@@ -124,3 +112,6 @@ var styles = StyleSheet.create({
 
 ### thanks
 * this project come from https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin
+
+### see detail use
+* https://github.com/remobile/react-native-template

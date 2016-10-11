@@ -1,29 +1,29 @@
 {
     "name": "@remobile/react-native-toast",
-        "version": "1.0.4",
-        "description": "A android like toast for react-native support for ios and android",
-        "main": "index.js",
-        "author": {
-            "name": "YunJiang.Fang",
-            "email": "42550564@qq.com"
-        },
-        "license": "MIT",
-        "keywords": [
-            "react-native",
-            "react-component",
-            "ios",
-            "android",
-            "toast",
-            "position",
-            "remobile",
-            "mobile"
-        ],
-        "homepage": "https://github.com/remobile/react-native-toast",
-        "bugs": {
-            "url": "https://github.com/remobile/react-native-toast/issues"
-        },
-        "repository": {
-            "type": "git",
-            "url": "git://github.com/remobile/react-native-toast.git"
-        }
+    "version": "1.0.5",
+    "description": "A android like toast for react-native support for ios and android",
+    "main": "index.js",
+    "author": {
+        "name": "YunJiang.Fang",
+        "email": "42550564@qq.com"
+    },
+    "license": "MIT",
+    "keywords": [
+        "react-native",
+        "react-component",
+        "ios",
+        "android",
+        "toast",
+        "position",
+        "remobile",
+        "mobile"
+    ],
+    "homepage": "https://github.com/remobile/react-native-toast",
+    "bugs": {
+        "url": "https://github.com/remobile/react-native-toast/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/remobile/react-native-toast.git"
+    }
 }
