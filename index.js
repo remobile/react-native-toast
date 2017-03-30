@@ -1,63 +1,60 @@
 'use strict';
 
-
-var ReactNative = require('react-native');
-var {
-    NativeModules
+const ReactNative = require('react-native');
+const {
+    NativeModules,
 } = ReactNative;
 
-var RCTToast= NativeModules.Toast;
-var Toast = {};
+const RCTToast = NativeModules.Toast;
+const Toast = {};
 
-var optionsBuilder = function () {
-
+const optionsBuilder = function () {
   // defaults
-  var message = null;
-  var duration = "short";
-  var position = "center";
-  var addPixelsY = 0;
+    let message = null;
+    let duration = 'short';
+    let position = 'center';
+    let addPixelsY = 0;
 
-  return {
-    withMessage: function(m) {
-      message = m;
-      return this;
-    },
+    return {
+        withMessage: function (m) {
+            message = m;
+            return this;
+        },
 
-    withDuration: function(d) {
-      duration = d;
-      return this;
-    },
+        withDuration: function (d) {
+            duration = d;
+            return this;
+        },
 
-    withPosition: function(p) {
-      position = p;
-      return this;
-    },
+        withPosition: function (p) {
+            position = p;
+            return this;
+        },
 
-    withAddPixelsY: function(y) {
-      addPixelsY = y;
-      return this;
-    },
+        withAddPixelsY: function (y) {
+            addPixelsY = y;
+            return this;
+        },
 
-    build: function() {
-      return {
-        message: message,
-        duration: duration,
-        position: position,
-        addPixelsY: addPixelsY
-      }
-    }
-  }
+        build: function () {
+            return {
+                message: message,
+                duration: duration,
+                position: position,
+                addPixelsY: addPixelsY,
+            };
+        },
+    };
 };
 
-
-var showWithOptions = function (options) {
+const showWithOptions = function (options) {
     RCTToast.show(options);
 };
 
-var showToast = function (message, duration, position) {
-  showWithOptions(
+const showToast = function (message, duration, position) {
+    showWithOptions(
       optionsBuilder()
-          .withMessage(message||'未知数据')
+          .withMessage(message || '未知数据')
           .withDuration(duration)
           .withPosition(position)
           .build()
@@ -65,35 +62,35 @@ var showToast = function (message, duration, position) {
 };
 
 Toast.showShortTop = function (message) {
-  showToast(message, "short", "top");
+    showToast(message, 'short', 'top');
 };
 
 Toast.showShortCenter = function (message) {
-  showToast(message, "short", "center");
+    showToast(message, 'short', 'center');
 };
 
 Toast.showShortBottom = function (message) {
-  showToast(message, "short", "bottom");
+    showToast(message, 'short', 'bottom');
 };
 
 Toast.showLongTop = function (message) {
-  showToast(message, "long", "top");
+    showToast(message, 'long', 'top');
 };
 
 Toast.showLongCenter = function (message) {
-  showToast(message, "long", "center");
+    showToast(message, 'long', 'center');
 };
 
 Toast.showLongBottom = function (message) {
-  showToast(message, "long", "bottom");
+    showToast(message, 'long', 'bottom');
 };
 
 Toast.show = function (message) {
-  showToast(message, "short", "bottom");
+    showToast(message, 'short', 'bottom');
 };
 
 Toast.hide = function () {
-  RCTToast.hide();
+    RCTToast.hide();
 };
 
 module.exports = Toast;
