@@ -1,6 +1,6 @@
 {
     "name": "@remobile/react-native-toast",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "A android like toast for react-native support for ios and android",
     "main": "index.js",
     "author": {
